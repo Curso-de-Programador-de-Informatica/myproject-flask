@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <title>Flask - António Solipa</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello, World!</h1>
+        <button id="myButton" class="button">Clique aqui</button>
+        <button id="darkModeButton" class="button">Modo Escuro</button>
+        <button id="aboutButton" class="button">Sobre o Projeto</button>
+        <button id="loginButton" class="button">Login</button>
+    </div>
+
+    <!-- Seção "Sobre o Projeto" oculta por padrão -->
+    <div id="aboutSection" class="section hidden">
+        <h1 class="section-title">Como Funciona a APP?</h1>
+        <p class="section-description">Esta aplicação, desenvolvida em Flask, opera com base em rotas. Ao adicionar "/" após o URL e uma palavra-chave específica, você é direcionado para uma rota específica.</p>
+        <p class="section-description">Segue abaixo a lista de rotas disponíveis:</p>
+        <ul class="route-list">
+            <li><strong>/path</strong></li>
+            <p>Exibe o subcaminho em que você se encontra.</p>
+            <li><strong>/hello</strong></li>
+            <p>Exibe uma mensagem de "Hello, World!"</p>
+            <li><strong>/user</strong></li>
+            <p>Exibe o subcaminho "user".</p>
+            <li><strong>/projects</strong></li>
+            <p>Exibe informações sobre projetos.</p>
+            <li><strong>/about</strong></li>
+            <p>Fornece detalhes sobre a aplicação.</p>
+            <li><strong>/login</strong></li>
+            <p>Exibe informações variáveis dependendo do estado de login do usuário.</p>
+            <li><strong>/post</strong></li>
+            <p>Exibe o subcaminho correspondente a um número inteiro específico (INT).</p>
+        </ul>
+    </div>
+
+    <!-- Seção "Login" -->
+    <div id="loginSection" class="section hidden">
+        <h1 class="section-title">Login feito com António Solipa</h1>
+    </div>
+
+    <div id="confetti-container"></div>
+</body>
+
+</html>
